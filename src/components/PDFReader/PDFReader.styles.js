@@ -37,7 +37,5 @@ export const Content = styled.div`
     cursor: pointer;
     font-size: 0.8em;
     border: 0;
-
-
   }
 `
