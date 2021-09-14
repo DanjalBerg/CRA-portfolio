@@ -38,7 +38,7 @@ const PDFReader = ({PDF}) => {
             disabled={pageNumber <= 1}
             onClick={previousPage}
           >
-            Previous
+            &lt;
           </button>
           <p>
             Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
@@ -48,7 +48,7 @@ const PDFReader = ({PDF}) => {
             disabled={pageNumber >= numPages}
             onClick={nextPage}
           >
-            Next
+            &gt;
           </button>
         </div>
       </Content>
