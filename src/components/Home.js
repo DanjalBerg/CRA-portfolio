@@ -10,7 +10,7 @@ import Grid from './Grid';
 import Hero from '../images/HeroImage.png'
 
 
-const gridTitles = ['CV', 'Master Thesis', 'number 3']
+const gridTitles = ['CV', 'Master_Thesis', 'D3_project', 'number_3']
 const Home = () => {
   console.log(Hero)
   return (
@@ -22,10 +22,8 @@ const Home = () => {
           <Link to={`/${title}`} className="title-items" key={title}>{title}</Link>
         ))}
       </Grid>
-
     </>
   )
-
 }
 
 export default Home
