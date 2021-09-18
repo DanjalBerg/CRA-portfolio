@@ -9,6 +9,7 @@ import { Wrapper, Content } from './PDFReader.styles'
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+
 const PDFReader = ({PDF}) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -25,7 +26,8 @@ const PDFReader = ({PDF}) => {
 
   const previousPage = () => changePage(-1);
   const nextPage = () => changePage(1);
-
+//onChange={event => ( map(nextPage))
+//setPageNumber(event.currentTarget.value))}
   return (
     <Wrapper>
       <Content>
@@ -33,7 +35,10 @@ const PDFReader = ({PDF}) => {
           file={PDF}
           onLoadSuccess={onDocumentLoadSucess}
           >
-          <Page pageNumber={pageNumber} />
+          <Page
+            pageNumber={pageNumber}
+          />
+
         </Document>
 
         <div className="buttonContainer">
@@ -45,8 +50,15 @@ const PDFReader = ({PDF}) => {
             &lt;
           </button>
           <p>
-            Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
+            Page {
+              <input
+                type="text"
+                value={pageNumber}
+                onChange={event => changePage(event.currentTarget.value-pageNumber)}
+              />
+              || (numPages ? 1 : '--')} of {numPages || '--'}
           </p>
+
           <button
             type="button"
             disabled={pageNumber >= numPages}

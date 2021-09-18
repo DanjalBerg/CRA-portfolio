@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 `
 
 export const Content = styled.div`
-  box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+  box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.6);
   border-radius: 20px;
 
   .buttonContainer {
@@ -22,8 +22,15 @@ export const Content = styled.div`
     transform: translateX(-50%);
     opacity: 0.2;
     transition: opacity ease-in-out 0.5s;
-    border-radius: 4px;
-    box-shadow: 2px 0px 2px 2px rgba(16, 36, 94, 0.4);
+    border-radius: 2em;
+    box-shadow: 0px 0px 4px 2px rgba(16, 36, 94, 0.3);
+  }
+
+  input {
+    width: 1.65em;
+    border: none;
+    font-size: 1em;
+    text-align: end;
   }
 
   .buttonContainer:hover {
@@ -37,5 +44,10 @@ export const Content = styled.div`
     cursor: pointer;
     font-size: 0.8em;
     border: 0;
+    border-radius: 2em;
+  }
+
+  div.react-pdf__Page__annotations {
+    display: none;
   }
 `

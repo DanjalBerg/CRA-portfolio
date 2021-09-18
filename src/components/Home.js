@@ -10,7 +10,7 @@ import Grid from './Grid';
 import Hero from '../images/HeroImage.png'
 
 
-const gridTitles = ['CV', 'Master_Thesis', 'D3_project', 'number_3']
+const gridTitles = ['CV', 'Master_Thesis', 'D3_project', 'To be continued...']
 const Home = () => {
   console.log(Hero)
   return (
